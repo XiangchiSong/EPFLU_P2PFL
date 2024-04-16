@@ -65,14 +65,14 @@ The simulation setup for communication parameters is as follows:
 - **Noise Power (sigma)**: `1e-10 Watts`.
 - **Number of CPU Cycles per Bit (c)**: `10800`. This metric is adapted from GPU's "floating-point operations per second" (FLOPS) to simulate the scenario using CPUs for a large-scale IoT environment.
 - **CPU Frequency (f)**: `1 GHz` (1e9 cycles per second), configured for an i7-9700K CPU at 3.60 GHz.
-- **Effective Switch Capacitance (alpha)**: `2e-28 Joules per cycle squared`.
+- **Effective Switch Capacitance (alpha)**: `2e-28` Joules per cycle squared.
 - **Distance Threshold**: `200`, ensuring the reference channel gain does not drop to zero.
 - **Communication to Cloud Cost Multiplier**: `1.5`, assuming that vertical communication costs are 1.5 times that of horizontal communication.
-- **Dynamic Multiplier**: Adjusted based on a reference average distance of 50 units.
+- **Dynamic Multiplier**: Adjusted based on a reference average distance of `50` units.
 - **Extra Loss**: `10`, this is an assumed value, adjusted based on actual conditions.
 - **Minimum Channel Gain to Cloud (min_g_2C)**: `5e-11`.
 - **Minimum Channel Gain P2P (min_g_P2P)**: `1e-10`.
-- **Distance Matrix**: A random distance matrix representing the distances between edge clients, ranging from 1 to 100.
+- **Distance Matrix**: A random distance matrix representing the distances between edge clients, ranging from `1 to 100`.
 
 ### EPFLU-P2PFL Parameter Settings
 The configuration for EPFLU-P2PFL is specified as follows:
