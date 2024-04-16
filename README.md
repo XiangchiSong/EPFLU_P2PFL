@@ -35,6 +35,27 @@ We extend FL into a horizontal peer-to-peer (P2P) structure and introduce our P2
 
 ## Model & Parameter Setting
 
+### Model Setting
+
+#### Classification Structure:
+- A fully connected (FC) layer with 200 neurons.
+- A batch normalization (BN) layer.
+- A second FC layer also with 200 neurons.
+- A softmax output layer to generate the final classification probabilities.
+#### CNN Model 
+Following the methodologies employed in the [MTFL](https://ieeexplore.ieee.org/abstract/document/9492755) work, the CNN architecture includes:
+- A 3x3 convolutional (conv) layer with 32 filters, followed by BN, ReLU activation, and a 2x2 max pooling.
+- A second 3x3 convolutional ReLU layer with 64 filters, accompanied by BN, ReLU activation, and a 2x2 max pooling.
+- A ReLU activated FC layer with 512 neurons.
+- A softmax output layer for classification.
+#### EPFLU Memory and Data Handling Settings
+EPFLU configures the deep learning model’s parameter count in terms of storage space required for model transmission:
+- `comm_datasize = 6400320 bit` representing the MINST Model size (approximately 781.29 KB) in bits.
+- `comm_datasize = 67758080 bit` representing the CIFAR Model size (approximately 8273 KB or 8.1 MB) in bits.
+EPFLU considers the volume of data involved per iteration or per individual data sample as the local computational size:
+- `local_datasize = 6272 bit` for MINST data size (784 B) in bits.
+- `local_datasize = 24576 bit` for CIFAR data size (approximately 3072 KB or 2.99 MB) in bits.
+
 ## Dataset Distribution Operation Detail
 
 ## Experimental Records
