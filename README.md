@@ -18,7 +18,7 @@ We will make it public after the paper is published.
 
 ## Overview
 
-We extend FL into a horizontal peer-to-peer (P2P) structure and introduce our P2PFL framework: EPFLU. EPFLU transitions the paradigms from vertical FL to horizontal P2P structure from the user perspective and incorporates personalized enhancement techniques using private information. Through horizontal consensus information aggregation and private information supplementation, EPFLU solves the weakness of traditional FL that dilutes the characteristics of individual client data and leads to model deviation. This structural transformation also significantly alleviates the original communication issues. Additionally, EPFLU has a customized simulation evaluation framework to make it more suitable for real-world large-scale IoT. Within this framework, we conducted detailed experiments of selected baselines against EPFLU on MNIST and CIFAR-10 datasets. The results demonstrate that EPFLU can consistently converge to the best performance under extreme data distribution scenarios.
+We extend FL into a horizontal peer-to-peer (P2P) structure and introduce our P2PFL framework: EPFLU. EPFLU transitions the paradigms from vertical FL to horizontal P2P structure from the user perspective and incorporates personalized enhancement techniques using private information. Through horizontal consensus information aggregation and private information supplementation, EPFLU solves the weakness of traditional FL that dilutes the characteristics of individual client data and leads to model deviation. This structural transformation also significantly alleviates the original communication issues. Additionally, EPFLU has a customized simulation evaluation framework to make it more suitable for real-world large-scale IoT. Within this framework, we conducted detailed experiments of selected baselines against EPFLU on MNIST and CIFAR-10 datasets. The results demonstrate that EPFLU can consistently converge to the best performance under extreme data distribution scenarios. We choose FedAvg[1], FedAdam[2,3] and PPT[4] as baselines. We Compared with the selected vertical aggregation and horizontal transmission cumulative aggregation methods, EPFLU achieves communication improvements of 21% and 57% respectively.
 
 ### System Requirements
 | Package      | Version |
@@ -43,7 +43,7 @@ We extend FL into a horizontal peer-to-peer (P2P) structure and introduce our P2
 - A second FC layer also with 200 neurons.
 - A softmax output layer to generate the final classification probabilities.
 #### CNN Model 
-Following the methodologies employed in the MTFL[1] work, the CNN architecture includes:
+Following the methodologies employed in the MTFL[2] work, the CNN architecture includes:
 - A 3x3 convolutional (conv) layer with 32 filters, followed by BN, ReLU activation, and a 2x2 max pooling.
 - A second 3x3 convolutional ReLU layer with 64 filters, accompanied by BN, ReLU activation, and a 2x2 max pooling.
 - A ReLU activated FC layer with 512 neurons.
@@ -66,4 +66,7 @@ PFLU considers the amount of data involved in processing a single iteration or s
 ## Special Thanks
 
 ## References
-[1] Mills J, Hu J, Min G. [Multi-task federated learning for personalised deep neural networks in edge computing](https://ieeexplore.ieee.org/abstract/document/9492755)[J]. IEEE Transactions on Parallel and Distributed Systems, 2021, 33(3): 630-641.
+[1] McMahan B, Moore E, Ramage D, et al. [Communication-efficient learning of deep networks from decentralized data](https://proceedings.mlr.press/v54/mcmahan17a?ref=https://githubhelp.com)[C]//Artificial intelligence and statistics. PMLR, 2017: 1273-1282.
+[2] Mills J, Hu J, Min G. [Multi-task federated learning for personalised deep neural networks in edge computing](https://ieeexplore.ieee.org/abstract/document/9492755)[J]. IEEE Transactions on Parallel and Distributed Systems, 2021, 33(3): 630-641.
+[3] Reddi S, Charles Z, Zaheer M, et al. [Adaptive federated optimization](https://arxiv.org/abs/2003.00295)[J]. arXiv preprint arXiv:2003.00295, 2020.
+[4] Chen Q, Wang Z, Zhang W, et al. [PPT: A privacy-preserving global model training protocol for federated learning in P2P networks](https://www.sciencedirect.com/science/article/pii/S0167404822003583)[J]. Computers & Security, 2023, 124: 102966.
