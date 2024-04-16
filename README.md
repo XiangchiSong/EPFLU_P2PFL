@@ -43,7 +43,7 @@ We extend FL into a horizontal peer-to-peer (P2P) structure and introduce our P2
 - A second FC layer also with 200 neurons.
 - A softmax output layer to generate the final classification probabilities.
 #### CNN Model 
-Following the methodologies employed in the [MTFL](https://ieeexplore.ieee.org/abstract/document/9492755) work, the CNN architecture includes:
+Following the methodologies employed in the [MTFL](https://ieeexplore.ieee.org/abstract/document/9492755)[1] work, the CNN architecture includes:
 - A 3x3 convolutional (conv) layer with 32 filters, followed by BN, ReLU activation, and a 2x2 max pooling.
 - A second 3x3 convolutional ReLU layer with 64 filters, accompanied by BN, ReLU activation, and a 2x2 max pooling.
 - A ReLU activated FC layer with 512 neurons.
@@ -66,3 +66,4 @@ PFLU considers the amount of data involved in processing a single iteration or s
 ## Special Thanks
 
 ## References
+[1] Mills J, Hu J, Min G. Multi-task federated learning for personalised deep neural networks in edge computing[J]. IEEE Transactions on Parallel and Distributed Systems, 2021, 33(3): 630-641.
