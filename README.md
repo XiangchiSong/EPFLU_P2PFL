@@ -52,6 +52,7 @@ Following the methodologies employed in the [MTFL](https://ieeexplore.ieee.org/a
 EPFLU configures the deep learning model’s parameter count in terms of storage space required for model transmission:
 - `comm_datasize = 6400320 bit` representing the MINST Model size (approximately 781.29 KB) in bits.
 - `comm_datasize = 67758080 bit` representing the CIFAR Model size (approximately 8273 KB or 8.1 MB) in bits.
+
 EPFLU considers the volume of data involved per iteration or per individual data sample as the local computational size:
 - `local_datasize = 6272 bit` for MINST data size (784 B) in bits.
 - `local_datasize = 24576 bit` for CIFAR data size (approximately 3072 KB or 2.99 MB) in bits.
