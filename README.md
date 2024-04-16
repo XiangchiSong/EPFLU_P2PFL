@@ -1,2 +1,2 @@
-# UP_P2PFL
+# EPFLU_P2PFL
 Code Implementation &amp; Parameter Setting Information
