@@ -2,6 +2,8 @@
 
 Detailed model and parameter setting, data distribution operation, and complete experimental records for [EPFLU: Efficient Peer-to-peer Federated Learning for Personalized User Models in Edge-Cloud Environments]
 
+School of Computing,  Korea Advanced Institute of Science and Technology,  Daejeon, Republic of Korea
+
 ### System Code & Experimental Records
 We will make it public after the paper is published.
 
@@ -133,3 +135,7 @@ If you like our works, please cite our paper. Also, feel free to contact us [xcs
 [4] Chen Q, Wang Z, Zhang W, et al. [PPT: A privacy-preserving global model training protocol for federated learning in P2P networks](https://www.sciencedirect.com/science/article/pii/S0167404822003583)[J]. Computers & Security, 2023, 124: 102966.
 
 [5] Liu L, Zhang J, Song S H, et al. Client-edge-cloud hierarchical federated learning(https://ieeexplore.ieee.org/abstract/document/9148862)[C]//ICC 2020-2020 IEEE international conference on communications (ICC). IEEE, 2020: 1-6.
+
+Copyright © 2024 Xiangchi Song, Zhaoyan Wang, KyeongDeok Baek, and In-Young Ko
+
+All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law. For permission requests, please email to the author.
