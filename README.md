@@ -20,6 +20,7 @@ Detailed model and parameter setting, data distribution operation, and complete 
 
 we extend FL into a horizontal peer-to-peer (P2P) structure and introduce our P2PFL framework: EPFLU. EPFLU transitions the paradigms from vertical FL to horizontal P2P structure from the user perspective and incorporates personalized enhancement techniques using private information. Through horizontal consensus information aggregation and private information supplementation, EPFLU solves the weakness of traditional FL that dilutes the characteristics of individual client data and leads to model deviation. This structural transformation also significantly alleviates the original communication issues. Additionally, EPFLU has a customized simulation evaluation framework to make it more suitable for real-world large-scale IoT. Within this framework, we design extreme data distribution scenarios and conduct detailed experiments on EPFLU and selected baselines on the MNIST and CIFAR-10 datasets. The results demonstrate that the robust and adaptive EPFLU framework can consistently converge to optimal performance even under extreme data distribution scenarios. We choose FedAvg[1], FedAdam[2,3] and PPT[4] as baselines. Compared with the selected vertical aggregation and horizontal transmission cumulative aggregation methods, EPFLU achieves communication improvements of 21% and 57% respectively.
 
+![image](https://github.com/XiangchiSong/EPFLU_P2PFL/blob/main/Figures/SystemFigure.png)
 
 ### System Requirements
 | Package      | Version |
