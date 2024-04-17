@@ -89,6 +89,7 @@ The configuration for EPFLU-P2PFL is specified as follows:
 ## Experimental Records
 
 ## Contact
+If you like our works, please cite our paper. Also, feel free to contact us [xcsong@kaist.ac.kr], we will reply to you within three working days！
 
 ## Special Thanks
 
