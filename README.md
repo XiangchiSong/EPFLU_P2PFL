@@ -85,33 +85,27 @@ The configuration for EPFLU-P2PFL is specified as follows:
 
   
 ## Dataset Distribution Operation Detail
-### Core Concepts
-- **Data Shards**: A shard represents a subset of the dataset. Managing the number and distribution of shards across clients is crucial for controlling the IID (independent and identically distributed) or non-IID nature of data across the network.
+### Core Concepts and Parameters
+- **Data Shards**: In federated learning, data shards represent discrete portions of the dataset. The management of these shards across clients is crucial for controlling the data distribution's nature (IID or non-IID).
 
-### Parameter Settings and Their Impact
-- **Number of Shards (n_shards)**: Dictates how the data is divided. More shards mean a finer granularity in control over data distribution.
-- **Number of Workers (W)**: Represents the total number of clients or nodes participating in the federated learning. Each worker will receive a portion of the total shards.
-- **Shard Allocation**:
-  - **Balanced**: Each client receives an equal number of shards.
-  - **Imbalanced**: Clients receive a varying number of shards, which simulates real-world scenarios where data isn't uniformly distributed across nodes.
+### Specific Parameter Settings and Their Impact
+- **Number of Shards (n_shards)**: Determines how the data is split into smaller subsets. For example, setting `n_shards = 2 * W` means each client potentially has access to twice the number of shards as there are clients.
+- **Number of Workers (W)**: This represents the total number of clients or nodes participating in the federated learning process. If `W = 500`, it means 500 separate clients are engaged in the training process.
+- **Shard Allocation Strategies**:
+  - **Balanced Allocation**: Each client receives an equal number of shards. Typically, `W` clients would each receive `n_shards / W` shards when shards are evenly distributed.
+  - **Imbalanced Allocation**: Clients receive a varying number of shards. Parameters like `min_shards_per_client` and `max_shards_per_client` control the range of shards each client can receive, e.g., from 1 to 5 shards per client.
 
-### Distribution Types
-- **Balanced IID (Type 1)**: Data is shuffled and evenly distributed among all clients, mimicking an IID scenario. This is often used for benchmarking because of its simplicity and fairness.
-- **Balanced Non-IID (Type 2)**: Involves sorting the data by class labels and then splitting it into shards that are distributed such that each client receives a predefined set of shards. This setup helps in creating scenarios where each client gets a diverse but non-representative sample of the overall dataset.
-- **Imbalanced Non-IID (Type 3)**: Clients receive shards in a manner that varies significantly in terms of data quantity and class representation, thus creating an imbalanced data distribution among the clients. This setting is more realistic and challenging as it tests the robustness of the federated algorithms under non-ideal conditions.
-- **Mixed IID/Non-IID (Type 4)**: A hybrid approach where a fraction of the clients receive data in an IID fashion, while the rest receive data non-IID. This setup can be used to simulate environments where different nodes have different data visibility and availability.
+### Distribution Types and Operational Details
+- **Balanced IID (Type 1)**: Here, the data is shuffled and evenly distributed among all clients. Each client would receive `Total data samples / W` samples, ensuring an IID scenario.
+- **Balanced Non-IID (Type 2)**: Data is first sorted by class labels and then divided into `2 * W` shards. Clients might be configured to each receive exactly 2 shards, regardless of the total number of clients.
+- **Imbalanced Non-IID (Type 3)**: In this configuration, the number of shards each client receives can range from 1 to 5, creating a highly variable data distribution. This is specified using the parameters `min_shards_per_client = 1` and `max_shards_per_client = 5`.
+- **Mixed IID/Non-IID (Type 4)**: This approach uses a combination of IID and non-IID settings where, for example, 70% of clients (calculated as `0.7 * W`) receive data in an IID fashion, and the remaining 30% receive data non-IID. The non-IID portion follows the imbalanced non-IID strategy.
 
-### Operational Details
-- **Shard Assignment**:
-  - For IID setups, shards are assigned randomly.
-  - For non-IID setups, shards are assigned based on specific patterns or rules, such as clustering similar classes together or ensuring that each client receives shards from only a few classes.
-- **Min and Max Shards per Client**: These parameters define the range of shards that each client can receive, crucial for imbalanced setups.
+### Implementation Considerations
+- **Shard Assignment Consistency**: Ensuring that shard assignments are consistent between training and testing datasets is critical for maintaining the validity of model evaluations. This is often achieved by using the same seed for random operations or by explicitly defining shard assignments when splitting the test dataset.
+- **Random Operations Seed**: Utilizing a fixed seed value (e.g., `seed = 42`) for all random operations to ensure reproducibility and consistency in experiments.
 
-### Implementation Tips
-- Ensuring consistency in shard assignment between training and testing datasets is critical for maintaining the validity of the model evaluation.
-- Using seed values for random operations helps in reproducing experiments and verifying results.
-
-The configuration of these parameters significantly influences the learning dynamics and the effectiveness of the federated learning models. Adjusting them according to the specific needs of the deployment scenario can lead to better model performance and more robust insights.
+This detailed overview provides clarity on how different settings and parameters impact the distribution of data among clients in federated learning scenarios. Such granular control is essential for experimenting with various training dynamics and understanding the behavior of learning algorithms under different data distributions.
 
 
 ## Experimental Records
