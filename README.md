@@ -106,7 +106,7 @@ The configuration for EPFLU-P2PFL is specified as follows:
 
 ### Implementation Tips
 - Ensuring consistency in shard assignment between training and testing datasets `specific_assignments=train_assign` is critical for maintaining the validity of the model evaluation.
-- Using seed values for random operations helps in reproducing experiments and verifying results. We used `0` in whole system running.
+- Using seed values for random operations helps in reproducing experiments and verifying results. We used `42` in imbalanced_non_iid and imbalanced_mixed_iid scenarios.
 
 The configuration of these parameters significantly influences the learning dynamics and the effectiveness of the federated learning models. Adjusting them according to the specific needs of the deployment scenario can lead to better model performance and more robust insights.
 
