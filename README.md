@@ -81,7 +81,7 @@ The configuration for EPFLU-P2PFL is specified as follows:
 - **Total Workers (W)**: `500`, suitable for a large-scale IoT scenario.
 - **Total Rounds (T)**: `300` rounds for CIFAR10 to verify performance and convergence, `50` rounds for MNIST to validate communication.
 - **Fraction of Clients Selected Per Round (C)**: `0.3`, balancing training and communication costs in a large-scale IoT setting.
-- **Client Learning Rate (lr)**: Different settings for different algorithms and datasets, e.g., `0.02` for CIFAR10 and `0.2` for MNIST with FedAvg; `0.05` for CIFAR10 and `0.2` for MNIST with FedAdam; `0.03` for CIFAR10 and `0.2` for MNIST with PPT; `0.001` for CIFAR10 and `0.001` for MNIST with FedAdam;
+- **Client Learning Rate (lr)**: Different settings for different algorithms and datasets, e.g., `0.02` for CIFAR10 and `0.2` for MNIST with FedAvg; `0.05` for CIFAR10 and `0.2` for MNIST with FedAdam; `0.03` for CIFAR10 and `0.2` for MNIST with PPT; `0.001` for CIFAR10 and `0.001` for MNIST with EPFLU;
 
   
 ## Dataset Distribution Operation Detail
