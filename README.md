@@ -51,7 +51,7 @@ EPFLU sets the storage space occupied by the number of parameters of the deep le
 
 EPFLU considers the amount of data involved in processing a single iteration or single data sample as the local computation size:
 - `local_datasize = 6272 bit` for MINST data size (784 B) in bits.
-- `local_datasize = 24576 bit` for CIFAR data size (approximately 3072 KB or 2.99 MB) in bits.
+- `local_datasize = 24576 bit` for CIFAR data size (approximately 3072 B or 3 KB) in bits.
 
 ### Communication Simulator Parameter Settings
 The simulation setup for communication parameters is as follows:
