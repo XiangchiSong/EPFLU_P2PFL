@@ -25,10 +25,9 @@ we extend FL into a horizontal peer-to-peer (P2P) structure and introduce our P2
 </div>
 
 ### System Requirements
-- **python**: `3.8` &emsp &emsp - **torch**: `1.7.0`
-- **cuda**: `11.0` &emsp &emsp - **cudnn**: `8.0`
-- **torchvision**: `0.8.0` &emsp - **numpy**: `1.19.2`
-- **progressbar2**: `3.47.0` &emsp - **tqdm**: `4.46.0`
+- **python**: `3.8`
+- **torch**: `1.7.0`  **cuda**: `11.0`  **cudnn**: `8.0`  **torchvision**: `0.8.0`  **numpy**: `1.19.2`
+- **progressbar2**: `3.47.0`  **tqdm**: `4.46.0`
 
 ## Model & Parameter Settings
 
