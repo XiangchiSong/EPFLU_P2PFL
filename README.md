@@ -67,7 +67,7 @@ The simulation setup for communication parameters is as follows:
 - **CPU Frequency (f)**: `1 GHz` (1e9 cycles per second), configured for an i7-9700K CPU at 3.60 GHz.
 - **Effective Switch Capacitance (alpha)**: `2e-28` Joules per cycle squared.
 - **Distance Threshold**: `200`, ensuring the reference channel gain does not drop to zero.
-- **Communication to Cloud Cost Multiplier**: `1.5`, assuming that vertical communication costs are 1.5 times that of horizontal communication.
+- **Communication to Cloud Cost Multiplier**: `1.5`, assuming that vertical FL communication costs are 1.5 times that of horizontal P2P communication. *In previous For the communication latency to the cloud, HierFAVG[5] assume it is **10** times larger than that to the edge.*
 - **Dynamic Multiplier**: Adjusted based on a reference average distance of `50` units.
 - **Extra Loss**: `10`, this is an assumed value, adjusted based on actual conditions.
 - **Minimum Channel Gain to Cloud (min_g_2C)**: `5e-11`.
@@ -101,3 +101,5 @@ If you like our works, please cite our paper. Also, feel free to contact us [xcs
 [3] Reddi S, Charles Z, Zaheer M, et al. [Adaptive federated optimization](https://arxiv.org/abs/2003.00295)[J]. arXiv preprint arXiv:2003.00295, 2020.
 
 [4] Chen Q, Wang Z, Zhang W, et al. [PPT: A privacy-preserving global model training protocol for federated learning in P2P networks](https://www.sciencedirect.com/science/article/pii/S0167404822003583)[J]. Computers & Security, 2023, 124: 102966.
+
+[5] Liu L, Zhang J, Song S H, et al. Client-edge-cloud hierarchical federated learning(https://ieeexplore.ieee.org/abstract/document/9148862)[C]//ICC 2020-2020 IEEE international conference on communications (ICC). IEEE, 2020: 1-6.
