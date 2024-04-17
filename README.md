@@ -53,7 +53,7 @@ EPFLU sets the storage space occupied by the number of parameters of the deep le
 - `comm_datasize = 6400320 bit` representing the MINST Model size (approximately 781.29 KB) in bits.
 - `comm_datasize = 67758080 bit` representing the CIFAR Model size (approximately 8273 KB or 8.1 MB) in bits.
 
-PFLU considers the amount of data involved in processing a single iteration or single data sample as the local computation size:
+EPFLU considers the amount of data involved in processing a single iteration or single data sample as the local computation size:
 - `local_datasize = 6272 bit` for MINST data size (784 B) in bits.
 - `local_datasize = 24576 bit` for CIFAR data size (approximately 3072 KB or 2.99 MB) in bits.
 
