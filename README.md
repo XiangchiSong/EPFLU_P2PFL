@@ -85,6 +85,34 @@ The configuration for EPFLU-P2PFL is specified as follows:
 
   
 ## Dataset Distribution Operation Detail
+### Core Concepts
+- **Data Shards**: A shard represents a subset of the dataset. Managing the number and distribution of shards across clients is crucial for controlling the IID (independent and identically distributed) or non-IID nature of data across the network.
+
+### Parameter Settings and Their Impact
+- **Number of Shards (n_shards)**: Dictates how the data is divided. More shards mean a finer granularity in control over data distribution.
+- **Number of Workers (W)**: Represents the total number of clients or nodes participating in the federated learning. Each worker will receive a portion of the total shards.
+- **Shard Allocation**:
+  - **Balanced**: Each client receives an equal number of shards.
+  - **Imbalanced**: Clients receive a varying number of shards, which simulates real-world scenarios where data isn't uniformly distributed across nodes.
+
+### Distribution Types
+- **Balanced IID (Type 1)**: Data is shuffled and evenly distributed among all clients, mimicking an IID scenario. This is often used for benchmarking because of its simplicity and fairness.
+- **Balanced Non-IID (Type 2)**: Involves sorting the data by class labels and then splitting it into shards that are distributed such that each client receives a predefined set of shards. This setup helps in creating scenarios where each client gets a diverse but non-representative sample of the overall dataset.
+- **Imbalanced Non-IID (Type 3)**: Clients receive shards in a manner that varies significantly in terms of data quantity and class representation, thus creating an imbalanced data distribution among the clients. This setting is more realistic and challenging as it tests the robustness of the federated algorithms under non-ideal conditions.
+- **Mixed IID/Non-IID (Type 4)**: A hybrid approach where a fraction of the clients receive data in an IID fashion, while the rest receive data non-IID. This setup can be used to simulate environments where different nodes have different data visibility and availability.
+
+### Operational Details
+- **Shard Assignment**:
+  - For IID setups, shards are assigned randomly.
+  - For non-IID setups, shards are assigned based on specific patterns or rules, such as clustering similar classes together or ensuring that each client receives shards from only a few classes.
+- **Min and Max Shards per Client**: These parameters define the range of shards that each client can receive, crucial for imbalanced setups.
+
+### Implementation Tips
+- Ensuring consistency in shard assignment between training and testing datasets is critical for maintaining the validity of the model evaluation.
+- Using seed values for random operations helps in reproducing experiments and verifying results.
+
+The configuration of these parameters significantly influences the learning dynamics and the effectiveness of the federated learning models. Adjusting them according to the specific needs of the deployment scenario can lead to better model performance and more robust insights.
+
 
 ## Experimental Records
 
