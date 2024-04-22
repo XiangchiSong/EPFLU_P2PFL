@@ -127,7 +127,7 @@ If you like our works, please cite our paper. Also, feel free to contact us: xcs
 
 [4] Chen Q, Wang Z, Zhang W, et al. [PPT: A privacy-preserving global model training protocol for federated learning in P2P networks](https://www.sciencedirect.com/science/article/pii/S0167404822003583)[J]. Computers & Security, 2023, 124: 102966.
 
-[5] Liu L, Zhang J, Song S H, et al. Client-edge-cloud hierarchical federated learning(https://ieeexplore.ieee.org/abstract/document/9148862)[C]//ICC 2020-2020 IEEE international conference on communications (ICC). IEEE, 2020: 1-6.
+[5] Liu L, Zhang J, Song S H, et al. [Client-edge-cloud hierarchical federated learning](https://ieeexplore.ieee.org/abstract/document/9148862)[C]//ICC 2020-2020 IEEE international conference on communications (ICC). IEEE, 2020: 1-6.
 
 ## 
 Copyright © 2024 Xiangchi Song, Zhaoyan Wang, KyeongDeok Baek, and In-Young Ko
