@@ -53,6 +53,15 @@ EPFLU considers the amount of data involved in processing a single iteration or 
 - `local_datasize = 6272 bit` for MINST data size (784 B) in bits.
 - `local_datasize = 24576 bit` for CIFAR data size (approximately 3072 B or 3 KB) in bits.
 
+### EPFLU-P2PFL Parameter Settings
+The configuration for EPFLU-P2PFL is specified as follows:
+- **Data Distribution Type (iid)**: Options include `1` for balanced-iid, `2` for balanced-non-iid, `3` for imbalanced-non-iid, and `4` for imbalanced-mixed-iid.
+- **Algorithm (alg)**: Choices are `fedavg`, `fedadam`, `ppt`, `epflu`.
+- **Total Workers (W)**: `500`, suitable for a large-scale IoT scenario.
+- **Total Rounds (T)**: `300` rounds for CIFAR10 to verify performance and convergence, `50` rounds for MNIST to validate communication.
+- **Sampling Rate (C)**: `0.3`, the best sampling rate after balancing training and communication costs under the large-scale IoT environment setting.
+- **Client Learning Rate (lr)**: Different settings for different algorithms and datasets, e.g., `0.02` for CIFAR10 and `0.2` for MNIST with FedAvg; `0.05` for CIFAR10 and `0.2` for MNIST with FedAdam; `0.03` for CIFAR10 and `0.2` for MNIST with PPT; `0.001` for CIFAR10 and `0.001` for MNIST with EPFLU;
+  
 ### Communication Simulator Parameter Settings
 The simulation setup for communication parameters is as follows:
 - **Bandwidth (B)**: `20 MHz` (2e7 Hz), representing typical bandwidths for LTE, 5G, and Wi-Fi.
@@ -70,16 +79,6 @@ The simulation setup for communication parameters is as follows:
 - **Minimum Channel Gain P2P (min_g_P2P)**: `1e-10`.
 - **Distance Matrix**: A random distance matrix representing the distances between edge clients, ranging from `1 to 100`.
 
-### EPFLU-P2PFL Parameter Settings
-The configuration for EPFLU-P2PFL is specified as follows:
-- **Data Distribution Type (iid)**: Options include `1` for balanced-iid, `2` for balanced-non-iid, `3` for imbalanced-non-iid, and `4` for imbalanced-mixed-iid.
-- **Algorithm (alg)**: Choices are `fedavg`, `fedadam`, `ppt`, `epflu`.
-- **Total Workers (W)**: `500`, suitable for a large-scale IoT scenario.
-- **Total Rounds (T)**: `300` rounds for CIFAR10 to verify performance and convergence, `50` rounds for MNIST to validate communication.
-- **Fraction of Clients Selected Per Round (C)**: `0.3`, balancing training and communication costs in a large-scale IoT setting.
-- **Client Learning Rate (lr)**: Different settings for different algorithms and datasets, e.g., `0.02` for CIFAR10 and `0.2` for MNIST with FedAvg; `0.05` for CIFAR10 and `0.2` for MNIST with FedAdam; `0.03` for CIFAR10 and `0.2` for MNIST with PPT; `0.001` for CIFAR10 and `0.001` for MNIST with EPFLU;
-
-  
 ## Dataset Distribution Operation Detail
 ### Core Concepts
 - **Data Shards**: A shard represents a subset of the dataset. Managing the number and distribution of shards across clients is crucial for controlling the IID (independent and identically distributed) or non-IID nature of data across the network. 
