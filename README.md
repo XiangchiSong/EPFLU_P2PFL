@@ -116,7 +116,7 @@ The configuration of these parameters significantly influences the learning dyna
 If you like our works, please cite our paper. Also, feel free to contact us: xcsong@kaist.ac.kr, we will reply to you within three working days！
 
 ## Special Thanks
-We would like to give a special thanks to the friends who provided help in this paper. We thank [Tuo Zhang](https://tuo-zhang.com/) for inspiring our research ideas, [Qian Chen](https://kqkq926.github.io/) for providing us with the baseline reproduction method, and [Jed Mills](https://scholar.google.com/citations?user=30_1nBcAAAAJ&hl=zh-CN&oi=sra)'s work for inspiring our personalized solution.
+We would like to give a special thanks to the friends who provided help in this paper. We thank [Tuo Zhang](https://tuo-zhang.com/) for inspiring our research ideas, [Qian Chen](https://kqkq926.github.io/) for providing us with the baseline reproduction method[4], and [Jed Mills](https://scholar.google.com/citations?user=30_1nBcAAAAJ&hl=zh-CN&oi=sra)'s work for inspiring our personalized solution[2].
 
 ## References
 [1] McMahan B, Moore E, Ramage D, et al. [Communication-efficient learning of deep networks from decentralized data](https://proceedings.mlr.press/v54/mcmahan17a?ref=https://githubhelp.com)[C]//Artificial intelligence and statistics. PMLR, 2017: 1273-1282.
