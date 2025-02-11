@@ -110,14 +110,16 @@ The configuration of these parameters significantly influences the learning dyna
 ## Contact
 If you like our works, please cite our paper:
 
-`@inproceedings{song2024epflu,
+```
+@inproceedings{song2024epflu,
   title={Epflu: Efficient peer-to-peer federated learning for personalized user models in edge-cloud environments},
   author={Song, Xiangchi and Wang, Zhaoyan and Baek, KyeongDeok and Ko, In-Young},
   booktitle={International Conference on Web Engineering},
   pages={3--17},
   year={2024},
   organization={Springer}
-}`
+}
+```
 
 Also, feel free to contact us: xcsong@kaist.ac.kr, we will reply to you within three working days！
 
