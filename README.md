@@ -1,16 +1,12 @@
 # EPFLU: Efficient Peer-to-peer Federated Learning for Personalized User Models in Edge-Cloud Environments
 
-Detailed model and parameter setting, data distribution operation, and complete experimental records for [EPFLU: Efficient Peer-to-peer Federated Learning for Personalized User Models in Edge-Cloud Environments] by *Xiangchi Song, Zhaoyan Wang, KyeongDeok Baek*, and *In-Young Ko*. School of Computing,  Korea Advanced Institute of Science and Technology,  Daejeon, Republic of Korea.
-
-### System Code & Experimental Records
-***We will make it public after the paper is published.***
-
+Detailed model and parameter setting, data distribution operation, and complete experimental records for [EPFLU: Efficient Peer-to-peer Federated Learning for Personalized User Models in Edge-Cloud Environments](https://link.springer.com/chapter/10.1007/978-3-031-75110-3_1) by *Xiangchi Song, Zhaoyan Wang, KyeongDeok Baek*, and *In-Young Ko*. School of Computing,  Korea Advanced Institute of Science and Technology,  Daejeon, Republic of Korea.
 
 ## Table of Contents
 * Overview
 * Model & Parameter Setting
 * Dataset Distribution Operation Detail
-* Experimental Records
+* Code & Experimental Records
 * Contact
 * Special Thanks
 * References
@@ -102,15 +98,14 @@ The simulation setup for communication parameters is as follows:
 - **Imbalanced Non-IID (Type 3)**: Clients receive shards in a manner that varies significantly in terms of data quantity and class representation, thus creating an imbalanced data distribution among the clients. This setting is more realistic and challenging as it tests the robustness of the federated algorithms under non-ideal conditions. In this configuration, the number of shards each client receives can range from 1 to 5, creating a highly variable data distribution. We used the parameters `min_shards_per_client = 1` and `max_shards_per_client = 2` in the EPFLU settings.
 - **Imbalanced Mixed-IID (Type 4)**: A hybrid approach where a fraction of the clients receive data in an IID fashion, while the rest receive data non-IID. This setup can be used to simulate environments where different nodes have different data visibility and availability. We used `50%` of clients (calculated as `0.5 * W`) receive data in an IID distribution, and the remaining `50%` receive data non-IID. The non-IID portion follows the imbalanced non-IID strategy. After we created the Mixed-IID scenario, We used the parameters `min_shards_per_client = 1` and `max_shards_per_client = 2` to create an imbalanced amount of data between clients, just like Type3 does in EPFLU.
 
-
 ### Implementation Tips
 - Ensuring consistency in shard assignment between training and testing datasets `specific_assignments=train_assign` is critical for maintaining the validity of the model evaluation.
 - Using seed values for random operations helps in reproducing experiments and verifying results. We used `42` in imbalanced_non_iid and imbalanced_mixed_iid scenarios.
 
 The configuration of these parameters significantly influences the learning dynamics and the effectiveness of the federated learning models. Adjusting them according to the specific needs of the deployment scenario can lead to better model performance and more robust insights.
 
-
-## Experimental Records
+## Code & Experimental Records
+***We will make it public after the paper is published.***
 
 ## Contact
 If you like our works, please cite our paper. Also, feel free to contact us: xcsong@kaist.ac.kr, we will reply to you within three working days！
@@ -132,6 +127,6 @@ We would like to give a special thanks to the friends who provided help in this 
 ## 
 Copyright © 2024 Xiangchi Song, Zhaoyan Wang, KyeongDeok Baek, and In-Young Ko
 
-This research was partly supported by the MSIT (Ministry of Science and ICT), Korea, under the ITRC (Information Technology Research Center) support program (IITP-2024-2020-0-01795) supervised by the IITP (Institute for Information & Communications Technology Planning & Evaluation) and IITP grant funded by the Korea government (MSIT) (No. RS-2024-00406245, Development of Software-Defined Infrastructure Technologies for Future Mobility).
+This research was partly supported by the MSIT (Ministry of Science and ICT), Korea, under the ITRC (Information Technology Research Center) support program (IITP-2024-2020-0-01795) supervised by the IITP (Institute for Information & Communications Technology Planning & Evaluation) and IITP grant funded by the Korea government (MSIT) (No. RS-2024-00406245, Development of SoftwareDefined Infrastructure Technologies for Future Mobility).
 
 All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher, except in the case of brief quotations embodied in critical reviews and certain other noncommercial uses permitted by copyright law. For permission requests, please email to the author.
