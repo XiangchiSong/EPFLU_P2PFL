@@ -1,6 +1,6 @@
 # EPFLU: Efficient Peer-to-peer Federated Learning for Personalized User Models in Edge-Cloud Environments
 
-Detailed model and parameter setting, data distribution operation, and complete experimental records for [EPFLU: Efficient Peer-to-peer Federated Learning for Personalized User Models in Edge-Cloud Environments](https://link.springer.com/chapter/10.1007/978-3-031-75110-3_1) by *Xiangchi Song, Zhaoyan Wang, KyeongDeok Baek*, and *In-Young Ko*. School of Computing,  Korea Advanced Institute of Science and Technology,  Daejeon, Republic of Korea.
+More details for [EPFLU: Efficient Peer-to-peer Federated Learning for Personalized User Models in Edge-Cloud Environments](https://link.springer.com/chapter/10.1007/978-3-031-75110-3_1) by *Xiangchi Song, Zhaoyan Wang, KyeongDeok Baek*, and *In-Young Ko*. School of Computing,  Korea Advanced Institute of Science and Technology,  Daejeon, Republic of Korea.
 
 ## Table of Contents
 * Overview
